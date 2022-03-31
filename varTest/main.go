@@ -8,6 +8,12 @@ import (
 var a = "Hello"
 var i = 123
 
+type Name struct {
+	A string
+	B bool
+	C int
+}
+
 func main() {
 	fmt.Println("================================")
 	b := 10
@@ -32,5 +38,10 @@ func main() {
 	fmt.Println("b is", reflect.TypeOf(b))
 	fmt.Printf("i is %T\n", i)
 	fmt.Println("w is", reflect.TypeOf(w))
+	fmt.Println("================================")
+
+	fmt.Printf("%v\n", Name{})
+	fmt.Printf("%+v\n", Name{})
+	fmt.Printf("%#v\n", Name{})
 	fmt.Println("================================")
 }
