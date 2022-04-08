@@ -15,7 +15,7 @@ func runBat(f string) {
 }
 
 func main() {
-	var bat string = "run.bat"
-	fmt.Println("bat =>\t", &bat)
-	runBat(bat)
+	var f string = "run.bat"
+	fmt.Println("f =>\t", &f)
+	runBat(f)
 }
