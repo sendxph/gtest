@@ -45,15 +45,15 @@ func main() {
 	fmt.Printf("%#v\n", Name{})
 	fmt.Println("================================")
 
+	// array and slice test
 	arr := [5]int{1, 2, 3, 4, 5}
-	//fmt.Println("arr =>", &arr, arr)
 	fmt.Println("arr[4] =", arr[4])
 	fmt.Printf("arr => %p, %#v\n", &arr, arr)
 	fmt.Printf("arr is %T\n", arr) //same as fmt.Println("ar is", reflect.TypeOf(ar))
 	s := []int{6, 7, 8, 9, 10}
 	fmt.Printf("s => %p, %#v\n", &s, s)
 	fmt.Printf("s is %T\n", s)
-	s2 := make([]int, 5, 10)
+	s2 := make([]int, 10, 20)
 	fmt.Printf("s2 => %p, %v\n", &s2, s2)
 	fmt.Printf("s2 is %T\n", s2)
 	s3 := arr[1:3:4]
@@ -64,4 +64,10 @@ func main() {
 	fmt.Println("s3[0] =", s3[0])
 	fmt.Println("s3[1] =", s3[1])
 	fmt.Println("================================")
+
+	// map test
+	m := make(map[string]int)
+	m["one"] = 1
+	m["two"] = 2
+	fmt.Printf("m => %p, %v\n", &m, m)
 }
